@@ -1,0 +1,21 @@
+{
+  "backends": {
+    "pytorch": {
+      "cmake_args": {
+        "TRITON_PYTORCH_DOCKER_IMAGE": "nvcr.io/nvidia/pytorch:26.04-py3"
+      }
+    },
+    "tensorflow": {
+      "tag": "r25.06",
+      "extra_cmake_args": {
+        "TRITON_TENSORFLOW_DOCKER_IMAGE": "nvcr.io/nvidia/tensorflow:25.02-tf2-py3"
+      }
+    },
+    "onnxruntime": {
+      "tag": "r26.04",
+      "cmake_args": {
+        "TRITON_ENABLE_ONNXRUNTIME_OPENVINO": "OFF"
+      }
+    }
+  }
+}
